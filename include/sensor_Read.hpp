@@ -35,7 +35,7 @@
 #include <soc/adc_channel.h>
 #include <unordered_map>
 #include <map>
-
+#include <debug_functions.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
 #include <Adafruit_BMP280.h>

@@ -62,6 +62,8 @@
 
 #include <Arduino.h>
 #include <esp_log.h>
+#include <HTTPClient.h>
+#include <WiFiClientSecure.h>
 
 #include <utilities/tac_logo.h>
 #include <utilities/customTitle_picture.h>

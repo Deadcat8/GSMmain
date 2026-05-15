@@ -34,6 +34,11 @@ String user_CA = "-----BEGIN CERTIFICATE----- optional -----END CERTIFICATE-----
 String setTime_value = "";
 String timeZone = "";
 
+String apnName = "mobile.o2.co.uk";
+String apnUser = "";
+String apnPass = "";
+bool   sendDataGSM = false;
+
 String hostname = "TeleAgriCulture Board";
 
 const char GET_Time_SERVER[30] = "www.teleagriculture.org";
