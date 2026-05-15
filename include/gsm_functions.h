@@ -48,7 +48,7 @@ static TinyGsmClient  _gsmClient(_modem);
 static bool _gsmInitialised = false;
 static bool _gprsConnected  = false;
 
-bool sendDataGSM = false;
+ bool sendDataGSM = false;
 
 // ── Helpers ──────────────────────────────────────────────────
 

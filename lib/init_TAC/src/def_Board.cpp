@@ -37,7 +37,7 @@ String timeZone = "";
 String apnName = "mobile.o2.co.uk";
 String apnUser = "";
 String apnPass = "";
-bool   sendDataGSM = false;
+extern bool sendDataGSM;
 
 String hostname = "TeleAgriCulture Board";
 
