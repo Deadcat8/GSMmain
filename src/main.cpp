@@ -56,6 +56,10 @@
  *
 /*/
 
+// GSM Changelog: 
+// Added setupGSMIfNeeded() and handleGSMLoop() to Function Declaration.
+// Added setupGSMIfNeeded() to setup
+
 #include <Arduino.h>
 #include <esp_log.h>
 
@@ -70,6 +74,8 @@
 #include <web_functions.h>
 #include <calibrate_functions.h>
 #include <lora_functions.h>
+
+#include "gsm_functions.h" // NEW GSM ADDITION
 
 #define LOG_TAG "MAIN"     // must be before debug_functions.h include
 #include <debug_functions.h>
@@ -102,6 +108,8 @@ void setupLoRaIfNeeded();
 void setupSDCardIfNeeded();
 void setupWebpageIfNeeded();
 
+void setupGSMIfNeeded(); // New
+
 void setupMQTTIfNeeded();
 void setupOSCIfNeeded();
 
@@ -114,6 +122,8 @@ void handleWiFiLoop();
 void handleSDLoop();
 void handleMQTTLoop();
 void handleOSCLoop();
+
+void handleGSMLoop(); // New
 
 // Callbacks
 void configModeCallback(WiFiManager *myWiFiManager);
@@ -204,6 +214,7 @@ void setup()
    setupSDCardIfNeeded();
    setupMQTTIfNeeded();
    setupOSCIfNeeded();
+   setupGSMIfNeeded(); // New
    setupWebpageIfNeeded();
 }
 
@@ -235,6 +246,9 @@ void loop()
 
    if (upload == "WIFI" && !configPortal_run)
       handleWiFiLoop();
+
+   if (upload == "GSM" && !configPortal_run)
+       handleGSMLoop();
 
    if (saveDataSDCard && !configPortal_run)
       tft->drawRGBBitmap(145, 2, sdcard_icon, 14, 19);
