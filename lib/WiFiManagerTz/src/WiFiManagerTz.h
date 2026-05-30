@@ -389,8 +389,9 @@ namespace WiFiManagerNS
     TimeConfHTML += (upload == "LIVE") ? "checked " : "";
     TimeConfHTML += "/><label for='livecheck'> LIVE</label></td>";
 
-    // TimeConfHTML += "<td><input type='radio' id='gsmcheck' name='upload' value='GSM' onchange='chooseUploade()' /><label for='gsmcheck'> GSM</label></td>";
-    TimeConfHTML += "</tr></table><br>";
+    TimeConfHTML += "<td><input type='radio' id='gsmcheck' name='upload' value='GSM' onchange='chooseUploade()' ";
+    TimeConfHTML += (upload == "GSM") ? "checked " : "";
+    TimeConfHTML += "/><label for='gsmcheck'> GSM</label></td>";
 
     // power/display/log options
     TimeConfHTML += (useBattery ? "<input type='checkbox' id='battery' name='battery' value='1' checked />"
