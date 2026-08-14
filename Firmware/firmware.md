@@ -1,3 +1,5 @@
+GSM test firmware version: firmware_EU_868_v1_91GSM.bin
+
 Firmware updates can be uploaded to the board via WiFi.
 
 Board Setup Menu --> Upload Firmware
